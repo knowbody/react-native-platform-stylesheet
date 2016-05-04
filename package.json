@@ -1,6 +1,6 @@
 {
   "name": "react-native-platform-stylesheet",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Platform Specific Stylesheet for React Native",
   "main": "lib/index.js",
   "scripts": {
