@@ -10,7 +10,27 @@ export function create(styles) {
     if (android && Platform.OS === 'android') {
       style = { ...style, ...android };
     }
-    platformStyles[name] = style;
+
+    if (name === 'ios' && Platform.OS === 'ios') {
+      Object.keys(style).forEach((styleName) => {
+        if (platformStyles[styleName]) {
+          platformStyles[styleName] = { ...platformStyles[styleName], ...style[styleName] };
+        }
+      });
+    }
+
+    if (name === 'android' && Platform.OS === 'android') {
+      Object.keys(style).forEach((styleName) => {
+        if (platformStyles[styleName]) {
+          platformStyles[styleName] = { ...platformStyles[styleName], ...style[styleName] };
+        }
+      });
+    }
+
+    if (name !== 'ios' && name !== 'android') {
+      platformStyles[name] = style;
+    }
   });
+
   return StyleSheet.create(platformStyles);
 }
