@@ -4,7 +4,7 @@
   "description": "Platform Specific Stylesheet for React Native",
   "main": "lib/index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel --presets es2015,stage-2,react-native -d lib/ src/",
+    "prepublish": "./node_modules/.bin/babel --presets es2015,stage-2,react-native -d lib/ src/",
     "test": "npm run compile && mocha --compilers js:babel-core/register"
   },
   "repository": {
