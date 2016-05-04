@@ -19,6 +19,9 @@
     "platform",
     "react"
   ],
+  "files": [
+    "lib"
+  ],
   "author": "Mateusz Zatorski <mateuszzatorski@gmail.com> (https://github.com/knowbody)",
   "license": "MIT",
   "bugs": {
