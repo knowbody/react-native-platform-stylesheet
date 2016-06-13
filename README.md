@@ -9,7 +9,7 @@ Seperated out the [F8StyleSheet](https://github.com/fbsamples/f8app/blob/master/
 
 2. Use it in your project:
 
-  ```jsx
+  ```js
   import { create } from 'react-native-platform-stylesheet';
   
   
@@ -34,7 +34,7 @@ Seperated out the [F8StyleSheet](https://github.com/fbsamples/f8app/blob/master/
   
   or
   
-  ```jsx
+  ```js
   import { create } from 'react-native-platform-stylesheet';
   
   
