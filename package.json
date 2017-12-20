@@ -2,11 +2,7 @@
   "name": "react-native-platform-stylesheet",
   "version": "0.0.7",
   "description": "Platform Specific Stylesheet for React Native",
-  "main": "lib/index.js",
-  "scripts": {
-    "prepublish": "./node_modules/.bin/babel --presets es2015,stage-2,react-native -d lib/ src/",
-    "test": "npm run compile && mocha --compilers js:babel-core/register"
-  },
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/knowbody/react-native-platform-stylesheet.git"
@@ -20,7 +16,7 @@
     "react"
   ],
   "files": [
-    "lib"
+    "src"
   ],
   "author": "Mateusz Zatorski <mateuszzatorski@gmail.com> (https://github.com/knowbody)",
   "license": "MIT",
