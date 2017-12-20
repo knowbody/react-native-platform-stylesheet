@@ -25,6 +25,9 @@ Seperated out the [F8StyleSheet](https://github.com/fbsamples/f8app/blob/master/
       ios: {
         backgroundColor: 'salmon'
       },
+      iosx: { //for the iphone x
+        backgroundColor: 'salmon'
+      },
       android: {
         backgroundColor: 'tomato'
       }
@@ -49,6 +52,11 @@ Seperated out the [F8StyleSheet](https://github.com/fbsamples/f8app/blob/master/
       flex: 1
     },
     ios: {
+      container: {
+        backgroundColor: 'salmon'
+      }
+    },
+    iosx: { //for the iphone x
       container: {
         backgroundColor: 'salmon'
       }
