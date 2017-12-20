@@ -8,7 +8,7 @@ export function create(styles) {
     if (iphonex && isIphoneX()) {
       style = { ...style, ...iphonex };
     }
-    if (ios && Platform.OS === 'ios') {
+    if (ios && Platform.OS === 'ios' && !iphonex) {
       style = { ...style, ...ios };
     }
     if (android && Platform.OS === 'android') {
