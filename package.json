@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/knowbody/react-native-platform-stylesheet#readme",
   "peerDependencies": {
-    "react-native": ">=0.24.1"
+     "react-native": ">=0.42.0"
   },
   "devDependencies": {
     "babel-cli": "^6.8.0",
