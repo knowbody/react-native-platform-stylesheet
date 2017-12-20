@@ -69,4 +69,4 @@ Seperated out the [F8StyleSheet](https://github.com/fbsamples/f8app/blob/master/
   });
   ```
   
-  *Note: in the second example, make sure that `ios` and `android` styles are defined in the end of the object.*
+  *Note: in the second example, make sure that `ios`, `iosx` and `android` styles are defined in the end of the object.*
