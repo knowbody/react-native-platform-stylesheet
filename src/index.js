@@ -4,9 +4,9 @@ import { isIphoneX } from 'react-native-iphone-x-helper'
 export function create(styles) {
   const platformStyles = {};
   Object.keys(styles).forEach((name) => {
-    let { iosx, ios, android, ...style } = { ...styles[name] };
-    if (iosx && isIphoneX()) {
-      style = { ...style, ...iosx };
+    let { iphonex, ios, android, ...style } = { ...styles[name] };
+    if (iphonex && isIphoneX()) {
+      style = { ...style, ...iphonex };
     }
     if (ios && Platform.OS === 'ios') {
       style = { ...style, ...ios };
@@ -14,15 +14,15 @@ export function create(styles) {
     if (android && Platform.OS === 'android') {
       style = { ...style, ...android };
     }
-    
-     if (name === 'iosx' && isIphoneX()) {
+
+     if (name === 'iphonex' && isIphoneX()) {
       Object.keys(style).forEach((styleName) => {
         if (platformStyles[styleName]) {
           platformStyles[styleName] = { ...platformStyles[styleName], ...style[styleName] };
         }
       });
     }
-    
+
     if (name === 'ios' && Platform.OS === 'ios') {
       Object.keys(style).forEach((styleName) => {
         if (platformStyles[styleName]) {
@@ -30,7 +30,7 @@ export function create(styles) {
         }
       });
     }
-   
+
     if (name === 'android' && Platform.OS === 'android') {
       Object.keys(style).forEach((styleName) => {
         if (platformStyles[styleName]) {
@@ -39,7 +39,7 @@ export function create(styles) {
       });
     }
 
-    if ( name !== 'iosx' && name !== 'ios' && name !== 'android') {
+    if ( name !== 'iphonex' && name !== 'ios' && name !== 'android') {
       platformStyles[name] = style;
     }
   });
