@@ -25,6 +25,9 @@ Seperated out the [F8StyleSheet](https://github.com/fbsamples/f8app/blob/master/
       ios: {
         backgroundColor: 'salmon'
       },
+      iphonex: { //for the iphone x
+        backgroundColor: 'bunny'
+      },
       android: {
         backgroundColor: 'tomato'
       }
@@ -53,6 +56,11 @@ Seperated out the [F8StyleSheet](https://github.com/fbsamples/f8app/blob/master/
         backgroundColor: 'salmon'
       }
     },
+    iphonex: { //for the iphone x
+      container: {
+        backgroundColor: 'bunny'
+      }
+    },
     android: {
       container: {
         backgroundColor: 'tomato'
@@ -61,4 +69,4 @@ Seperated out the [F8StyleSheet](https://github.com/fbsamples/f8app/blob/master/
   });
   ```
   
-  *Note: in the second example, make sure that `ios` and `android` styles are defined in the end of the object.*
+  *Note: in the second example, make sure that `ios`, `iosx` and `android` styles are defined in the end of the object.*

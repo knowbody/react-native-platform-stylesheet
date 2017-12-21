@@ -1,12 +1,8 @@
 {
   "name": "react-native-platform-stylesheet",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Platform Specific Stylesheet for React Native",
-  "main": "lib/index.js",
-  "scripts": {
-    "prepublish": "./node_modules/.bin/babel --presets es2015,stage-2,react-native -d lib/ src/",
-    "test": "npm run compile && mocha --compilers js:babel-core/register"
-  },
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/knowbody/react-native-platform-stylesheet.git"
@@ -20,7 +16,7 @@
     "react"
   ],
   "files": [
-    "lib"
+    "src"
   ],
   "author": "Mateusz Zatorski <mateuszzatorski@gmail.com> (https://github.com/knowbody)",
   "license": "MIT",
@@ -29,7 +25,7 @@
   },
   "homepage": "https://github.com/knowbody/react-native-platform-stylesheet#readme",
   "peerDependencies": {
-    "react-native": ">=0.24.1"
+     "react-native": ">=0.42.0"
   },
   "devDependencies": {
     "babel-cli": "^6.8.0",
@@ -41,6 +37,7 @@
     "react-native": "^0.24.1"
   },
   "dependencies": {
-    "babel-polyfill": "^6.8.0"
+    "babel-polyfill": "^6.8.0",
+    "react-native-iphone-x-helper": "^1.0.1"
   }
 }

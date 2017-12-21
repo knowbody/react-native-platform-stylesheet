@@ -1,14 +1,26 @@
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Dimensions, Platform } from 'react-native'
+import { isIphoneX } from 'react-native-iphone-x-helper'
 
 export function create(styles) {
   const platformStyles = {};
   Object.keys(styles).forEach((name) => {
-    let { ios, android, ...style } = { ...styles[name] };
-    if (ios && Platform.OS === 'ios') {
+    let { iphonex, ios, android, ...style } = { ...styles[name] };
+    if (iphonex && isIphoneX()) {
+      style = { ...style, ...iphonex };
+    }
+    if (ios && Platform.OS === 'ios' && !iphonex) {
       style = { ...style, ...ios };
     }
     if (android && Platform.OS === 'android') {
       style = { ...style, ...android };
+    }
+
+     if (name === 'iphonex' && isIphoneX()) {
+      Object.keys(style).forEach((styleName) => {
+        if (platformStyles[styleName]) {
+          platformStyles[styleName] = { ...platformStyles[styleName], ...style[styleName] };
+        }
+      });
     }
 
     if (name === 'ios' && Platform.OS === 'ios') {
@@ -27,7 +39,7 @@ export function create(styles) {
       });
     }
 
-    if (name !== 'ios' && name !== 'android') {
+    if ( name !== 'iphonex' && name !== 'ios' && name !== 'android') {
       platformStyles[name] = style;
     }
   });
